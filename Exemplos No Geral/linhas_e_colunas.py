@@ -3,7 +3,7 @@
 # elemento = ""
 # coluna = 0
 
-#Concatenar = Juntar
+#Concatenar = Juntar#
 
 # while contador < numero: # esse é para linhas
 #     while coluna < numero: # esse é para colunas
