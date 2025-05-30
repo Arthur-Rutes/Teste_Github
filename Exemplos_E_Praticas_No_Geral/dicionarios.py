@@ -72,11 +72,53 @@
 
 
 #Prática
+# def histogram(palavra):
+#     contar = {}
+#     #For Que Serve Para Contar As Letras Das Palavras.
+#     for letra in palavra:
+#         if letra in contar:
+#             contar[letra] += 1
+#         else:
+#             contar[letra] = 1
+#     #For Que Serve Para Printar Tudo Do Jeito Certo.
+#     for letra in contar:
+#         print(letra + ": " + "*" * contar[letra])
 
-def histogram(palavra):
 
 
+# histogram("Rubble From Stone")
+
+# Deletando Chaves #
+# del #
+# staff = {"Alan":"Professor", "Emily":"Aluna", "Davi":"Professor"}
+# del staff["Alan"]
+# print(staff)
 
 
+# pop #
+# pop pode ser usado para armazenar a entidade "deletada" #
+# deletado = staff.pop("Emily")
 
-print(histogram(""))
+# print(deletado)
+
+
+#Estruturar dados com o dicionario
+Pessoa1 = {"Nome":"Peppa Pig","Altura":135,"Peso":105,"Idade":14}
+Pessoa2 = {"Nome":"Lilo Stitch","Altura":50,"Peso":35,"Idade":200}
+Pessoa3 = {"Nome":"Ariel","Altura":175,"Peso":200,"Idade":15}
+
+Pessoas = [Pessoa1, Pessoa2, Pessoa3]
+
+for pessoa in Pessoas:
+    print(f"Nome: {pessoa["Nome"]}")
+    print(f"Idade: {pessoa["Idade"]}")
+    print(f"Altura: {pessoa["Altura"]}")
+    print(f"Peso: {pessoa["Peso"]}")
+    print(" ")
+    
+altura_combinada = 0
+
+for pessoa in Pessoas:
+    altura_combinada += pessoa["Altura"]
+
+print(altura_combinada)
