@@ -1,0 +1,1 @@
+frutas = ["Banana", "Goiaba", "Dragonfruit", "Abacaxi", "Maçã"]

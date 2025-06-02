@@ -74,19 +74,19 @@
 #Prática
 # def histogram(palavra):
 #     contar = {}
-#     #For Que Serve Para Contar As Letras Das Palavras.
+# #For Que Serve Para Contar As Letras Das Palavras.
 #     for letra in palavra:
 #         if letra in contar:
 #             contar[letra] += 1
 #         else:
 #             contar[letra] = 1
-#     #For Que Serve Para Printar Tudo Do Jeito Certo.
+# #For Que Serve Para Printar Tudo Do Jeito Certo.
 #     for letra in contar:
 #         print(letra + ": " + "*" * contar[letra])
 
 
 
-# histogram("Rubble From Stone")
+# histogram("Rubbles From Stone")
 
 # Deletando Chaves #
 # del #
@@ -116,9 +116,9 @@ for pessoa in Pessoas:
     print(f"Peso: {pessoa["Peso"]}")
     print(" ")
     
-altura_combinada = 0
+# altura_combinada = 0
 
-for pessoa in Pessoas:
-    altura_combinada += pessoa["Altura"]
+# for pessoa in Pessoas:
+#     altura_combinada += pessoa["Altura"]
 
-print(altura_combinada)
+# print(f"Altura combinada: {altura_combinada}")
