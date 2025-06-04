@@ -21,7 +21,7 @@ while True:
 
 
     elif escolha == "Não":
-        print("Ok Aqui Esta A Lista Completa:")
+        print("Ok, Aqui Esta A Lista Completa:")
         print(banco_filmes)
         break
 
