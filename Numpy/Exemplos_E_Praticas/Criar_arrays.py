@@ -63,7 +63,7 @@ print("")
 print("Slicing")
 arr2d = np.array([[1, 2, 3, 4], #0
                   [5, 6, 12, 13], #1
-                  [14, 7, 15, 16]]) #2
+                  [14, 7, 9, 22]]) #2
 fatia2d_a = +arr2d[:3, 1:3]
 print(fatia2d_a)
 print("")
@@ -106,7 +106,14 @@ print(PrecoAjustado2)
 print("")
 
 # Iteração
-array = np.array([1,2,3,4,5,6,25,78,99,105,133,666,1332,1998])
+array_inter = np.array([1,2,3,4,5,6,25,78,99,105,133,666,1332,1998])
 
-for n in array:
+for n in array_inter:
     print(f"Valor{n}")
+print("")
+
+# Sum E Mean
+
+o_array = np.array([15,25,84,62,11,3])
+soma = np.sum(o_array)
+media = np.mean(o_array)
