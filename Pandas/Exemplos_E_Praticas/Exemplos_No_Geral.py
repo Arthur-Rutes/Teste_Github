@@ -110,8 +110,62 @@ df_filmes = pd.read_csv(url_filmes)
 # print("\nFilmes Com Nota >= 9 (Primeiras Linhas)")
 # print(df_filmes_bem_avaliados["Series_Title"].head())
 
-# Filmes Que Tem Gênero 'Action'
+# Filmes Que Tem Gênero 'Action'.
 
 # filmes_acao = df_filmes[df_filmes['Genre'].str.contains('Action', na=False)]
 # print("\nFilmes Que Contem O Genero 'Action'")
 # print(filmes_acao[['Series_Title','Genre']].head())
+
+
+# Criar Uma Nova Coluna.
+# df_filmes['Rating_x_10'] = df_filmes['IMDB_Rating'] * 10
+# print("O Dataframe Agora Tem Uma Nova Coluna: ")
+# print(df_filmes.head())
+# print("")
+
+# Conversão Da Coluna Gross Para Float E Ignorando Erros Caso Falhar.
+# df_filmes['Gross'] = pd.to_numeric(df_filmes['Gross'], errors='coerce')
+
+
+# Agora, Convertido O Numero Gross Em Numero, É Mais Seguro Fazer A Comparação.
+# df_filmes['Alta_Receita'] = df_filmes['Gross'] > 1000
+# print("DataFrame Com Nova Coluna 'Alta_Receita' (Primeiras Linhas)")
+# print(df_filmes.head())
+# print("")
+
+# Drop.
+# Método Drop Remove Uma Linha (Registro) Ou Coluna.
+# axis = 1 | Exclui A Coluna.
+# df_filmes = df_filmes.drop('Poster_Link', axis=1)
+# print(df_filmes.head())
+# print("")
+
+# axis = 0 | Excluí O Registro
+# df_filmes = df_filmes.drop(4,axis=0)
+# print(df_filmes.head())
+# print("")
+
+# Lidando Com Dados Ausentes.
+# Verificar Dados Ausentes Com .isna() .sum()
+
+print("Contagem De Valores Ausentes Por Coluna: ")
+print(df_filmes.isna().sum())
+print("")
+
+# Removendo Linhas/Colunas.
+# Criando Uma Cópia Para Não Modificar O Arquivo Original.
+
+df_sem_nan_linhas = df_filmes.copy()
+
+# Removendo Todas As Linhas Que Contenham Qualquer Valor 'nan' (nan = Not A Number).
+df_sem_nan_linhas.dropna(inplace=True)
+print(f"Número De Linhas Originais: {len(df_filmes)}")
+print("")
+print(f"Número De Linhas Após Drop: {len(df_sem_nan_linhas)}")
+print("")
+
+# Removendo Colunas Que Tenham Qualquer Registro 'nan'
+df_sem_nan_colunas = df_filmes.dropna(axis=1)
+print(f"Colunas Originais: {df_filmes.columns.tolist()}")
+print("")
+print(f"Colunas Após Dropna: {df_sem_nan_colunas.columns.tolist()}")
