@@ -11,7 +11,7 @@ try:
 
 
 
-    #Dta Frames
+    #Data Frames
     # dados_alunos = {
     #     'nome':['Ana','Jonas','Roger','Lucas','Zack','Ed'],
     #     'idade':[1,2,8,7,4,15],
@@ -182,10 +182,10 @@ try:
     # print(df_ordem_nota)
     # print("")
     # Anscending 'False' = Decrescente | Ascending 'True' = Crescente.
-    df_ordenado_duas_col = df_filmes.sort_values(by=['Released_Year','Gross'],ascending=[False,True])
-    print("Top 5 Filmes Por Ano E Gross:")
-    print(df_ordenado_duas_col.head())
-    print("")
+    # df_ordenado_duas_col = df_filmes.sort_values(by=['Released_Year','Gross'],ascending=[False,True])
+    # print("Top 5 Filmes Por Ano E Gross:")
+    # print(df_ordenado_duas_col.head())
+    # print("")
     
     df_filmes['Gross'] = df_filmes['Gross'].str.replace(',','')
     df_filmes['Gross'] = pd.to_numeric(df_filmes['Gross'], errors='coerce')
@@ -199,9 +199,9 @@ try:
     )
     print(metricas_por_ano)
     print("")
-    # Salvando Em Um Arquivo CSV Sem O Indice.
-    df_filmes.to_csv('filmes_mais_legais_do_site.csv', index=False)
-    print("DataFrame Salvo Em 'filmes_mais_legais_do_site.csv'")
+    # # Salvando Em Um Arquivo CSV Sem O Indice.
+    # df_filmes.to_csv('filmes_mais_legais_do_site.csv', index=False)
+    # print("DataFrame Salvo Em 'filmes_mais_legais_do_site.csv'")
     
     
 except Exception as e:
